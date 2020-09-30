@@ -1,4 +1,4 @@
-package uebung4;
+package modul2.uebung4;
 
 public class Strings {
     public static void main(String[] args) {

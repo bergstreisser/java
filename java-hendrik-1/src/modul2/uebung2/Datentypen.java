@@ -1,4 +1,4 @@
-package uebung2;
+package modul2.uebung2;
 
 public class Datentypen {
     public static void main(String[] args) {
