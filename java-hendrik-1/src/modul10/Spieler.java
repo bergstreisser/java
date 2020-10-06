@@ -36,7 +36,6 @@ public class Spieler {
                 System.out.println();
                 System.out.print("#");
             } else if(j == xPosition) {
-                //System.out.println("X-Position: " + xPosition);
                 System.out.print(richtung);
             } else if (j == 19) {
                 System.out.print("#");

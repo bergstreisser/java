@@ -16,12 +16,14 @@ public class Spiel {
 
         do {
             System.out.println();
-            System.out.println("Aktion: g = gehen, l = links drehen, r = rechts drehen, v = vorwärtz drehen, q = beenden");
+            System.out.println("Aktion: g = gehen, l = links drehen, r = rechts drehen, v = vorwärtz drehen, z = zurück drehen, q = beenden");
             aktion = scanner.nextLine();
 
             switch (aktion) {
                 case "g": {
                     if(spieler.getRichtung().equals("^") && spieler.getyPosition() < spielfeld.getGRENZE_OBEN()) {
+                        System.out.println("gehen nicht möglich!");
+                    } else if(spieler.getRichtung().equals("v") && spieler.getyPosition() > spielfeld.getGRENZE_UNTEN()) {
                         System.out.println("gehen nicht möglich!");
                     } else if(spieler.getRichtung().equals("<") && spieler.getxPosition() < spielfeld.getGRENZE_LINKS()) {
                         System.out.println("gehen nicht möglich!");
@@ -32,13 +34,7 @@ public class Spiel {
                     }
                     break;
                 }
-                case "l":
-                    spielfeld.zeichneFeld(spieler, aktion);
-                    break;
-                case "r":
-                    spielfeld.zeichneFeld(spieler, aktion);
-                    break;
-                case "v":
+                case "l", "r", "v", "z":
                     spielfeld.zeichneFeld(spieler, aktion);
                     break;
                 case "q":

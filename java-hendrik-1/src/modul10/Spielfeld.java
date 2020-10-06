@@ -4,7 +4,7 @@ public class Spielfeld {
 
     //Feldgrenzen
     private final int GRENZE_OBEN = 1;
-    private final int GRENZE_UNTEN = 9;
+    private final int GRENZE_UNTEN = 8;
     private final int GRENZE_LINKS = 2;
     private final int GRENZE_RECHTS = 17;
 
@@ -37,6 +37,8 @@ public class Spielfeld {
                 //in welche Richtung gehen? link, rechts, hoch, runter?
                 if(richtung.equals("^")) {
                     spieler.setyPosition(spielerYPosition - 1);
+                } else if(richtung.equals("v")) {
+                    spieler.setyPosition(spielerYPosition + 1);
                 } else if(richtung.equals("<")) {
                     spieler.setxPosition(spielerXPosition - 1);
                 } else if(richtung.equals(">")) {
@@ -95,6 +97,22 @@ public class Spielfeld {
                 for(int i = 0; i < 10; i++) {
                     if(i == spieler.getyPosition()) {
                         spieler.setRichtung("^");
+                        spieler.spielerDrehen(spieler.getxPosition());
+                    } else {
+                        zeichneMitLeerzeichen();
+                    }
+                }
+
+                System.out.println();
+                zeichneOhneLeerzeichen();
+                break;
+
+            case "z":
+                zeichneOhneLeerzeichen();
+
+                for(int i = 0; i < 10; i++) {
+                    if(i == spieler.getyPosition()) {
+                        spieler.setRichtung("v");
                         spieler.spielerDrehen(spieler.getxPosition());
                     } else {
                         zeichneMitLeerzeichen();
