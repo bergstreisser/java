@@ -5,8 +5,8 @@ public class Spielfeld {
     //Feldgrenzen
     private final int GRENZE_OBEN = 1;
     private final int GRENZE_UNTEN = 9;
-    private final int GRENZE_LINKS = 1;
-    private final int GRENZE_RECHTS = 19;
+    private final int GRENZE_LINKS = 2;
+    private final int GRENZE_RECHTS = 17;
 
     public int getGRENZE_OBEN() {
         return GRENZE_OBEN;
@@ -32,7 +32,7 @@ public class Spielfeld {
 
                 String richtung = spieler.getRichtung();
                 int spielerYPosition = spieler.getyPosition();
-                int spielerXPosition = spieler.getyPosition();
+                int spielerXPosition = spieler.getxPosition();
 
                 //in welche Richtung gehen? link, rechts, hoch, runter?
                 if(richtung.equals("^")) {

@@ -21,12 +21,11 @@ public class Spiel {
 
             switch (aktion) {
                 case "g": {
-                    if (
-                            spieler.getyPosition() < spielfeld.getGRENZE_OBEN() ||
-                            spieler.getyPosition() > spielfeld.getGRENZE_UNTEN() ||
-                            spieler.getxPosition() < spielfeld.getGRENZE_LINKS() ||
-                            spieler.getxPosition() > spielfeld.getGRENZE_RECHTS()
-                    ) {
+                    if(spieler.getRichtung().equals("^") && spieler.getyPosition() < spielfeld.getGRENZE_OBEN()) {
+                        System.out.println("gehen nicht möglich!");
+                    } else if(spieler.getRichtung().equals("<") && spieler.getxPosition() < spielfeld.getGRENZE_LINKS()) {
+                        System.out.println("gehen nicht möglich!");
+                    } else if(spieler.getRichtung().equals(">") && spieler.getxPosition() > spielfeld.getGRENZE_RECHTS()) {
                         System.out.println("gehen nicht möglich!");
                     } else {
                         spielfeld.zeichneFeld(spieler, aktion);
