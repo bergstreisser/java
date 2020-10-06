@@ -29,7 +29,21 @@ public class Spielfeld {
         switch (aktion) {
             case "g":
                 zeichneOhneLeerzeichen();
-                bestimmePositionen(spieler);
+
+                String richtung = spieler.getRichtung();
+                int spielerYPosition = spieler.getyPosition();
+                int spielerXPosition = spieler.getyPosition();
+
+                //in welche Richtung gehen? link, rechts, hoch, runter?
+                if(richtung.equals("^")) {
+                    spieler.setyPosition(spielerYPosition - 1);
+                } else if(richtung.equals("<")) {
+                    spieler.setxPosition(spielerXPosition - 1);
+                } else if(richtung.equals(">")) {
+                    spieler.setxPosition(spielerXPosition + 1);
+                } else {
+                    System.out.println("Richtung nicht bekannt!");
+                }
 
                 for(int i = 0; i < 10; i++) { //Y-Richtung
                     if(i == spieler.getyPosition()) {
@@ -45,7 +59,6 @@ public class Spielfeld {
 
             case "l":
                 zeichneOhneLeerzeichen();
-                bestimmePositionen(spieler);
 
                 for(int i = 0; i < 10; i++) {
                     if(i == spieler.getyPosition()) {
@@ -62,6 +75,7 @@ public class Spielfeld {
 
             case "r":
                 zeichneOhneLeerzeichen();
+
                 for(int i = 0; i < 10; i++) {
                     if(i == spieler.getyPosition()) {
                         spieler.setRichtung(">");
@@ -70,12 +84,14 @@ public class Spielfeld {
                         zeichneMitLeerzeichen();
                     }
                 }
+
                 System.out.println();
                 zeichneOhneLeerzeichen();
                 break;
 
             case "v":
                 zeichneOhneLeerzeichen();
+
                 for(int i = 0; i < 10; i++) {
                     if(i == spieler.getyPosition()) {
                         spieler.setRichtung("^");
@@ -84,29 +100,12 @@ public class Spielfeld {
                         zeichneMitLeerzeichen();
                     }
                 }
+
                 System.out.println();
                 zeichneOhneLeerzeichen();
                 break;
         }
 
-    }
-
-    private void bestimmePositionen(Spieler spieler) {
-
-        String richtung = spieler.getRichtung();
-        int spielerYPosition = spieler.getyPosition();
-        int spielerXPosition = spieler.getyPosition();
-
-        //in welche Richtung gehen? link, rechts, hoch, runter?
-        if(richtung.equals("^")) {
-            spieler.setyPosition(spielerYPosition - 1);
-        } else if(richtung.equals("<")) {
-            spieler.setyPosition(spielerXPosition - 1);
-        } else if(richtung.equals(">")) {
-            spieler.setyPosition(spielerXPosition - 1);
-        } else {
-            System.out.println("Richtung nicht bekannt!");
-        }
     }
 
     private void zeichneOhneLeerzeichen() {
