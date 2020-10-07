@@ -1,18 +1,20 @@
-package modul10;
+package modul10.spielfeld2;
 
-public class TestFeld {
-    public static void main(String[] args) {
-        char[][] feld = new char[10][10];
+public class Spielfeld2 {
+
+    public void zeichneSpielfeld(int x, int y) {
+
+        char[][] feld = new char[x][y];
 
         for(int i = 0; i < feld.length; i++) {
             feld[i][0] = '#';
-            feld[i][9] = '#';
+            feld[i][y-1] = '#';
             for(int j = 1; j < feld.length - 1; j++) {
                 feld[i][j] = ' ';
             }
             for(int k = 1; k < feld[i].length -1; k++) {
                 feld[0][k] = '#';
-                feld[9][k] = '#';
+                feld[y-1][k] = '#';
             }
         }
 
@@ -23,4 +25,5 @@ public class TestFeld {
             System.out.println();
         }
     }
+
 }

@@ -1,4 +1,4 @@
-package modul10;
+package modul10.spielfeld1;
 
 import java.util.Scanner;
 
