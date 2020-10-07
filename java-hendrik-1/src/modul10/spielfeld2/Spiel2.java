@@ -10,7 +10,6 @@ public class Spiel2 {
         String aktion;
         boolean spiel = true;
 
-        Spielfeld2 spielfeld2 = new Spielfeld2();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Bitte gibt die Länge und Breite des Feldes ein.");
@@ -25,7 +24,9 @@ public class Spiel2 {
 
         } while ((feldLaenge != feldBreite) || (feldLaenge < 10) || (feldLaenge > 30));
 
-        spielfeld2.zeichneSpielfeld(feldLaenge, feldBreite);
+        Spielfeld2 spielfeld2 = new Spielfeld2(feldLaenge, feldBreite);
+        Spieler2 spieler2 = new Spieler2();
+        spielfeld2.zeichneSpielfeld(spieler2);
 
         do {
             System.out.println();
@@ -34,10 +35,10 @@ public class Spiel2 {
 
             switch (aktion) {
                 case "g":
-                    spielfeld2.zeichneSpielfeld(feldLaenge, feldBreite);
+                    spieler2.gehen();
                     break;
                 case "l", "r", "v", "z":
-                    spielfeld2.zeichneSpielfeld(feldLaenge, feldBreite);
+
                     break;
                 case "q":
                     System.out.println("Spiel beendet!");
