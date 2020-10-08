@@ -34,6 +34,14 @@ public class Spielfeld2 {
         feld[feldLaenge - 2][feldBreite - 2] = '$';
 
         if(feld[spieler2.getxPosition()][spieler2.getyPosition()] == '$') {
+            feld[spieler2.getxPosition()][spieler2.getyPosition()] = spieler2.getRichtung();
+            //das gesamte Spielfeld drucken
+            for(int i = 0; i < feld.length; i++) {
+                for(int j = 0; j < feld[i].length; j++) {
+                    System.out.print(feld[i][j]);
+                }
+                System.out.println();
+            }
             System.out.println("Gratuliere, Du hast das Geld gefunden!!!");
             System.out.println("Das Spiel ist beendet!");
             System.exit(0);
