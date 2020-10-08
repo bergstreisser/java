@@ -2,21 +2,21 @@ package modul10.spielfeld2;
 
 public class Spieler2 {
 
-    private int xPosition;
     private int yPosition;
-    private char[] richtung;
+    private int xPosition;
+    private char richtung;
+    private char[] richtungen;
 
     Spieler2() {
-        richtung = new char[4];
-        richtung[0] = '^';
-        richtung[1] = '<';
-        richtung[2] = '>';
-        richtung[3] = 'v';
+        richtungen = new char[4];
+        richtungen[0] = '^';
+        richtungen[1] = '<';
+        richtungen[2] = '>';
+        richtungen[3] = 'v';
 
         xPosition = 3;
         yPosition = 3;
-        //feld.getFeld()[3][3] = richtungUndPosition[0];
-        //feld.setSpielerRichtung(richtung[0]);
+        richtung = richtungen[0];
     }
 
     public int getxPosition() {
@@ -36,18 +36,52 @@ public class Spieler2 {
     }
 
     public char getRichtung() {
-        return richtung[0];
+        return richtung;
+    }
+
+    public void setRichtung(char richtung) {
+        this.richtung = richtung;
     }
 
     public void drehLinks() {
-
+        if(richtung == '^') {
+            richtung = richtungen[1];
+        } else if(richtung == '<') {
+            richtung = richtungen[3];
+        } else if(richtung == 'v') {
+            richtung = richtungen[2];
+        } else if(richtung == '>') {
+            richtung = richtungen[0];
+        } else {
+            System.out.println("Drehung nach rechts nicht möglich...");
+        }
     }
 
     public void drehRechts() {
-
+        if(richtung == '^') {
+            richtung = richtungen[2];
+        } else if(richtung == '<') {
+            richtung = richtungen[0];
+        } else if(richtung == 'v') {
+            richtung = richtungen[1];
+        } else if(richtung == '>') {
+            richtung = richtungen[3];
+        } else {
+            System.out.println("Drehung nach links nicht möglich...");
+        }
     }
 
     public void gehen() {
-
+        if(richtung == '^') {
+            yPosition--;
+        } else if(richtung == '<') {
+            xPosition--;
+        } else if(richtung == 'v') {
+            yPosition++;
+        } else if(richtung == '>') {
+            xPosition++;
+        } else {
+            System.out.println("gehen nicht möglich...");
+        }
     }
 }

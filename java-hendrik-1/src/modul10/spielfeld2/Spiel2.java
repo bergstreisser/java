@@ -36,9 +36,15 @@ public class Spiel2 {
             switch (aktion) {
                 case "g":
                     spieler2.gehen();
+                    spielfeld2.zeichneSpielfeld(spieler2);
                     break;
-                case "l", "r", "v", "z":
-
+                case "l":
+                    spieler2.drehLinks();
+                    spielfeld2.zeichneSpielfeld(spieler2);
+                    break;
+                case "r":
+                    spieler2.drehRechts();
+                    spielfeld2.zeichneSpielfeld(spieler2);
                     break;
                 case "q":
                     System.out.println("Spiel beendet!");
