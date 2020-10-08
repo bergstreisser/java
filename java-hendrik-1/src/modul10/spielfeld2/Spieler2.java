@@ -14,8 +14,8 @@ public class Spieler2 {
         richtungen[2] = '>';
         richtungen[3] = 'v';
 
-        xPosition = 3;
-        yPosition = 3;
+        xPosition = 4;
+        yPosition = 4;
         richtung = richtungen[0];
     }
 
@@ -37,10 +37,6 @@ public class Spieler2 {
 
     public char getRichtung() {
         return richtung;
-    }
-
-    public void setRichtung(char richtung) {
-        this.richtung = richtung;
     }
 
     public void drehLinks() {

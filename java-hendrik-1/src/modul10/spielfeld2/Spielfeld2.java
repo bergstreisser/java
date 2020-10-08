@@ -2,9 +2,13 @@ package modul10.spielfeld2;
 
 public class Spielfeld2 {
 
+    private int feldLaenge;
+    private int feldBreite;
     private char[][] feld;
 
     Spielfeld2(int feldLaenge, int feldBreite) {
+        this.feldLaenge = feldLaenge;
+        this.feldBreite = feldBreite;
         feld = new char[feldLaenge][feldBreite];
     }
 
@@ -25,6 +29,14 @@ public class Spielfeld2 {
                 feld[0][k] = '#'; //obere Reihe von links nach rechts mit # belegen
                 feld[feld.length - 1][k] = '#'; //untere Reihe von links nach rechts mit # belegen
             }
+        }
+
+        feld[feldLaenge - 2][feldBreite - 2] = '$';
+
+        if(feld[spieler2.getxPosition()][spieler2.getyPosition()] == '$') {
+            System.out.println("Gratuliere, Du hast das Geld gefunden!!!");
+            System.out.println("Das Spiel ist beendet!");
+            System.exit(0);
         }
 
         //den Spieler auf das Feld setzen
