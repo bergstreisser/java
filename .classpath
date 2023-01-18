@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="java-hendrik-1/src"/>
+	<classpathentry kind="src" path="java-hendrik-2/src"/>
+	<classpathentry kind="src" path="java-nail-1/src"/>
+	<classpathentry kind="src" path="TCP-IP"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
