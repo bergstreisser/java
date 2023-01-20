@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class ServerMain {
 	public static void main(String[] args) {
-		int port = 41145;
+		int port = 12004;
 		try {
 			ServerSocket serverSocket = new ServerSocket(port);
 			while(true) {
