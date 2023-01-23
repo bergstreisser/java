@@ -74,6 +74,14 @@ public class taschenrechnerMain {
 				System.out.println("Das Ergebnis ist: " + (zahl1 / zahl2));
 				
 				break;
+			case 5:
+				System.out.println("Zahl?");
+				eingabe = reader.readLine();
+				zahl1 = Integer.parseInt(eingabe);
+				
+				System.out.println("Das Ergebnis ist: " + Math.sqrt(zahl1));
+				
+				break;
 			
 			}//end switch Case
 				
