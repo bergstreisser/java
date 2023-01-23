@@ -8,7 +8,7 @@ public class taschenrechnerMain {
 
 	public static void main(String[] args) throws IOException {
 		boolean state = true;
-		int zahl1, zahl2 = 0;
+		double zahl1, zahl2 = 0;
 		String eingabe = "0";
 		int eingabeFromString = 0;
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -63,6 +63,15 @@ public class taschenrechnerMain {
 				System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2));
 				break;
 			case 4:
+				System.out.println("Erste Zahl?");
+				eingabe = reader.readLine();
+				zahl1 = Integer.parseInt(eingabe);
+				
+				System.out.println("Zweite Zahl?");
+				eingabe = reader.readLine();
+				zahl2 = Integer.parseInt(eingabe);
+				
+				System.out.println("Das Ergebnis ist: " + (zahl1 / zahl2));
 				
 				break;
 			
