@@ -15,7 +15,7 @@ public class taschenrechnerMain {
 			System.out.println("Rechenoperation?");
 			System.out.println("<0> Ende <1> Plus");
 			System.out.println("<2> Minus <3> Mal");
-			System.out.println("<4> Geteilt");
+			System.out.println("<4> Geteilt <5> Wurzel");
 			
 
 			eingabe = reader.readLine();
