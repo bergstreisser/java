@@ -95,15 +95,36 @@ public class taschenrechnerMain {
 				}
 				break;
 			case 3:
-				System.out.println("Erste Zahl?");
+				System.out.println("Sollen 2 oder 3 zahlen multipliziert werden?");
 				eingabe = reader.readLine();
-				zahl1 = Integer.parseInt(eingabe);
+				anzahlElemente = Integer.parseInt(eingabe);
 				
-				System.out.println("Zweite Zahl?");
-				eingabe = reader.readLine();
-				zahl2 = Integer.parseInt(eingabe);
-				
-				System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2));
+				if(anzahlElemente==2) {
+					System.out.println("Erste Zahl?");
+					eingabe = reader.readLine();
+					zahl1 = Integer.parseInt(eingabe);
+					
+					System.out.println("Zweite Zahl?");
+					eingabe = reader.readLine();
+					zahl2 = Integer.parseInt(eingabe);
+					
+					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2));
+				}
+				if(anzahlElemente==3) {
+					System.out.println("Erste Zahl?");
+					eingabe = reader.readLine();
+					zahl1 = Integer.parseInt(eingabe);
+					
+					System.out.println("Zweite Zahl?");
+					eingabe = reader.readLine();
+					zahl2 = Integer.parseInt(eingabe);
+					
+					System.out.println("Dritte Zahl?");
+					eingabe = reader.readLine();
+					zahl3 = Integer.parseInt(eingabe);
+					
+					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2 * zahl3));
+				}
 				break;
 				
 			case 4:
