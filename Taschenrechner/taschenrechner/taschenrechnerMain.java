@@ -28,10 +28,12 @@ public class taschenrechnerMain {
 				System.out.println("Prozedur wird beendet");
 				state = false;
 				break;
+				
 			case 1:
 				System.out.println("Sollen 2 oder 3 zahlen addiert werden?");
 				eingabe = reader.readLine();
 				anzahlElemente = Integer.parseInt(eingabe);
+				
 				if(anzahlElemente==2) {
 					System.out.println("Erste Zahl?");
 					eingabe = reader.readLine();
@@ -59,17 +61,38 @@ public class taschenrechnerMain {
 					System.out.println("Das Ergebnis ist: " + (zahl1 + zahl2 + zahl3));
 				}
 				break;
+				
 			case 2:
-				System.out.println("Erste Zahl?");
+				System.out.println("Sollen 2 oder 3 zahlen subtrahiert werden?");
 				eingabe = reader.readLine();
-				zahl1 = Integer.parseInt(eingabe);
+				anzahlElemente = Integer.parseInt(eingabe);
 				
-				System.out.println("Zweite Zahl?");
-				eingabe = reader.readLine();
-				zahl2 = Integer.parseInt(eingabe);
-				
-				System.out.println("Das Ergebnis ist: " + (zahl1 - zahl2));
-				
+				if(anzahlElemente==2) {
+					System.out.println("Erste Zahl?");
+					eingabe = reader.readLine();
+					zahl1 = Integer.parseInt(eingabe);
+					
+					System.out.println("Zweite Zahl?");
+					eingabe = reader.readLine();
+					zahl2 = Integer.parseInt(eingabe);
+					
+					System.out.println("Das Ergebnis ist: " + (zahl1 - zahl2));
+				}
+				if(anzahlElemente==3) {
+					System.out.println("Erste Zahl?");
+					eingabe = reader.readLine();
+					zahl1 = Integer.parseInt(eingabe);
+					
+					System.out.println("Zweite Zahl?");
+					eingabe = reader.readLine();
+					zahl2 = Integer.parseInt(eingabe);
+					
+					System.out.println("Dritte Zahl?");
+					eingabe = reader.readLine();
+					zahl3 = Integer.parseInt(eingabe);
+					
+					System.out.println("Das Ergebnis ist: " + (zahl1 - zahl2 - zahl3));
+				}
 				break;
 			case 3:
 				System.out.println("Erste Zahl?");
@@ -82,6 +105,7 @@ public class taschenrechnerMain {
 				
 				System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2));
 				break;
+				
 			case 4:
 				System.out.println("Erste Zahl?");
 				eingabe = reader.readLine();
@@ -92,8 +116,8 @@ public class taschenrechnerMain {
 				zahl2 = Integer.parseInt(eingabe);
 				
 				System.out.println("Das Ergebnis ist: " + (zahl1 / zahl2));
-				
 				break;
+				
 			case 5:
 				System.out.println("Zahl?");
 				eingabe = reader.readLine();
