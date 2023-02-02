@@ -134,7 +134,7 @@ public class taschenrechnerMain {
 				}
 				break;
 			case 3:
-				System.out.println("Sollen 2 oder 3 zahlen multipliziert werden?");
+				System.out.println("Sollen 2, 3 oder 4 zahlen multipliziert werden?");
 				eingabe = reader.readLine();
 				anzahlElemente = Integer.parseInt(eingabe);
 				
@@ -163,6 +163,25 @@ public class taschenrechnerMain {
 					zahl3 = Integer.parseInt(eingabe);
 					
 					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2 * zahl3));
+				}
+				if(anzahlElemente==3) {
+					System.out.println("Erste Zahl?");
+					eingabe = reader.readLine();
+					zahl1 = Integer.parseInt(eingabe);
+					
+					System.out.println("Zweite Zahl?");
+					eingabe = reader.readLine();
+					zahl2 = Integer.parseInt(eingabe);
+					
+					System.out.println("Dritte Zahl?");
+					eingabe = reader.readLine();
+					zahl3 = Integer.parseInt(eingabe);
+					
+					System.out.println("Vierte Zahl?");
+					eingabe = reader.readLine();
+					zahl4 = Integer.parseInt(eingabe);
+					
+					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2 * zahl3 * zahl4));
 				}
 				break;
 				
