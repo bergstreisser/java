@@ -164,7 +164,7 @@ public class taschenrechnerMain {
 					
 					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2 * zahl3));
 				}
-				if(anzahlElemente==3) {
+				if(anzahlElemente==4) {
 					System.out.println("Erste Zahl?");
 					eingabe = reader.readLine();
 					zahl1 = Integer.parseInt(eingabe);
@@ -205,7 +205,22 @@ public class taschenrechnerMain {
 				System.out.println("Das Ergebnis ist: " + Math.sqrt(zahl1));
 				
 				break;
-			
+			case 6:
+				if(anzahlElemente==3) {
+					System.out.println("Erste Zahl?");
+					eingabe = reader.readLine();
+					zahl1 = Integer.parseInt(eingabe);
+					
+					System.out.println("Zweite Zahl?");
+					eingabe = reader.readLine();
+					zahl2 = Integer.parseInt(eingabe);
+					
+					System.out.println("Dritte Zahl?");
+					eingabe = reader.readLine();
+					zahl3 = Integer.parseInt(eingabe);
+					
+					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2 + zahl3));
+				}
 			}//end switch Case
 				
 		}//end while
