@@ -194,7 +194,6 @@ public class taschenrechnerMain {
 				System.out.println("Zweite Zahl?");
 				eingabe = reader.readLine();
 				zahl2 = Integer.parseInt(eingabe);
-
 				System.out.println("Das Ergebnis ist: " + (zahl1 / zahl2));
 				break;
 
@@ -215,6 +214,17 @@ public class taschenrechnerMain {
 
 				System.out.println("Das Ergebnis ist: " + zahl1 % zahl2);
 
+				break;
+
+			case 7:
+				System.out.println("Basis?");
+				zahl1 = Integer.parseInt(reader.readLine());
+				System.out.println("Exponent?");
+				zahl2 = Integer.parseInt(reader.readLine());
+
+				System.out.println("Das Ergebnis ist: " + Math.pow(zahl1, zahl2));
+
+				break;
 
 			}//end switch Case
 				
