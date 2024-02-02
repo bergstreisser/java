@@ -194,11 +194,6 @@ public class taschenrechnerMain {
 				System.out.println("Zweite Zahl?");
 				eingabe = reader.readLine();
 				zahl2 = Integer.parseInt(eingabe);
-
-				if(zahl2 == 0){
-					System.out.println("Es darf nicht duch 0 dividiert werden!");
-					break;
-				}
 				System.out.println("Das Ergebnis ist: " + (zahl1 / zahl2));
 				break;
 
