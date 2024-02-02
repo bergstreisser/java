@@ -231,6 +231,18 @@ public class taschenrechnerMain {
 
 				break;
 
+				case 8:
+					System.out.println("Zahl für ln?");
+					zahl1 = Integer.parseInt(reader.readLine());
+
+					if (zahl1 <= 0) {
+						System.out.println("Eingabe muss größer als 0 sein.");
+					} else {
+						System.out.println("Das Ergebnis von log10(" + zahl1 + ") ist: " + Math.log10(zahl1));
+					}
+
+					break;
+
 			}//end switch Case
 				
 		}//end while
