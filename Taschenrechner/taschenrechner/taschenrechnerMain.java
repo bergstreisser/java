@@ -19,6 +19,7 @@ public class taschenrechnerMain {
 			System.out.println("<2> Minus <3> Mal");
 			System.out.println("<4> Geteilt <5> Wurzel");
 			System.out.println("<6> Modulo <7> Potenz");
+			System.out.println("<8> Natürlicher Logarithmus (ln) <9> Logarithmus Basis 10 (log10)");
 
 
 			eingabe = reader.readLine();
@@ -231,17 +232,27 @@ public class taschenrechnerMain {
 
 				break;
 
-				case 8:
-					System.out.println("Zahl für ln?");
-					zahl1 = Integer.parseInt(reader.readLine());
+			case 8:
+				System.out.println("Zahl für ln?");
+				zahl1 = Integer.parseInt(reader.readLine());
 
-					if (zahl1 <= 0) {
-						System.out.println("Eingabe muss größer als 0 sein.");
-					} else {
-						System.out.println("Das Ergebnis von log10(" + zahl1 + ") ist: " + Math.log10(zahl1));
-					}
+				if (zahl1 <= 0) {
+					System.out.println("Eingabe muss größer als 0 sein.");
+				} else {
+					System.out.println("Das Ergebnis von log10(" + zahl1 + ") ist: " + Math.log10(zahl1));
+				}
 
-					break;
+				break;
+
+			case 9:
+				System.out.println("Zahl für log10?");
+				zahl1 = Double.parseDouble(reader.readLine());
+				if (zahl1 <= 0) {
+					System.out.println("Eingabe muss größer als 0 sein.");
+				} else {
+					System.out.println("Das Ergebnis von log10(" + zahl1 + ") ist: " + Math.log10(zahl1));
+				}
+				break;
 
 			}//end switch Case
 				
