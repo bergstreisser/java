@@ -254,7 +254,10 @@ public class taschenrechnerMain {
 				}
 				break;
 
+			default: System.out.println("Gib eine Zahl zwischen 0 und 9 ein!");
+			
 			}//end switch Case
+
 				
 		}//end while
 
