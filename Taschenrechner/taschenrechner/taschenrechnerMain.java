@@ -12,6 +12,7 @@ public class taschenrechnerMain {
 		int anzahlElemente = 0;
 		String eingabe = "0";
 		int eingabeFromString = 0;
+		int ergebnis = 0;
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		while(state) {
 			System.out.println("Rechenoperation?");
@@ -36,156 +37,52 @@ public class taschenrechnerMain {
 				eingabe = reader.readLine();
 				anzahlElemente = Integer.parseInt(eingabe);
 
-				if(anzahlElemente==2) {
-					System.out.println("Erste Zahl?");
-					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 + zahl2));
+				if (anzahlElemente < 2) {
+					break;
 				}
-				if(anzahlElemente==3) {
-					System.out.println("Erste Zahl?");
+				ergebnis = 0;
+				for (int i = 0; i < anzahlElemente; i++) {
+					System.out.println("Zahl " + (i + 1) + ":");
 					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Dritte Zahl?");
-					eingabe = reader.readLine();
-					zahl3 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 + zahl2 + zahl3));
+					int zahl = Integer.parseInt(eingabe);
+					ergebnis += zahl;
 				}
-				if(anzahlElemente==4) {
-					System.out.println("Erste Zahl?");
-					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Dritte Zahl?");
-					eingabe = reader.readLine();
-					zahl3 = Integer.parseInt(eingabe);
-
-					System.out.println("Vierte Zahl?");
-					eingabe = reader.readLine();
-					zahl4 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 + zahl2 + zahl3 + zahl4));
-				}
+				System.out.println("Das Ergebnis ist: " + ergebnis);
 				break;
 
 			case 2:
-				System.out.println("Sollen 2, 3 oder 4 zahlen subtrahiert werden?");
+				System.out.println("Wieviele Zahlen sollen subtrahiert werden?");
 				eingabe = reader.readLine();
 				anzahlElemente = Integer.parseInt(eingabe);
-
-				if(anzahlElemente==2) {
-					System.out.println("Erste Zahl?");
-					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 - zahl2));
+				if (anzahlElemente < 2) {
+					break;
 				}
-				if(anzahlElemente==3) {
-					System.out.println("Erste Zahl?");
+				for (int i = 0; i < anzahlElemente; i++) {
+					System.out.println("Zahl " + (i + 1) + ":");
 					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Dritte Zahl?");
-					eingabe = reader.readLine();
-					zahl3 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 - zahl2 - zahl3));
+					int zahl = Integer.parseInt(eingabe);
+					ergebnis = i == 0 ? zahl : ergebnis - zahl;
 				}
-
-				if(anzahlElemente==4) {
-					System.out.println("Erste Zahl?");
-					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Dritte Zahl?");
-					eingabe = reader.readLine();
-					zahl3 = Integer.parseInt(eingabe);
-
-					System.out.println("Vierte Zahl?");
-					eingabe = reader.readLine();
-					zahl4 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 - zahl2 - zahl3 - zahl4));
-				}
-				break;
+				System.out.println("Das Ergebnis ist: " + ergebnis);
+				break;		
+				
 			case 3:
-				System.out.println("Sollen 2, 3 oder 4 zahlen multipliziert werden?");
+				System.out.println("Wieviele Zahlen sollen multipliziert werden?");
 				eingabe = reader.readLine();
 				anzahlElemente = Integer.parseInt(eingabe);
 
-				if(anzahlElemente==2) {
-					System.out.println("Erste Zahl?");
-					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2));
+				if (anzahlElemente < 2) {
+					break;
 				}
-				if(anzahlElemente==3) {
-					System.out.println("Erste Zahl?");
+				ergebnis = 1;
+				for (int i = 0; i < anzahlElemente; i++) {
+					System.out.println("Zahl " + (i + 1) + ":");
 					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Dritte Zahl?");
-					eingabe = reader.readLine();
-					zahl3 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2 * zahl3));
+					int zahl = Integer.parseInt(eingabe);
+					ergebnis *= zahl;
 				}
-				if(anzahlElemente==4) {
-					System.out.println("Erste Zahl?");
-					eingabe = reader.readLine();
-					zahl1 = Integer.parseInt(eingabe);
-
-					System.out.println("Zweite Zahl?");
-					eingabe = reader.readLine();
-					zahl2 = Integer.parseInt(eingabe);
-
-					System.out.println("Dritte Zahl?");
-					eingabe = reader.readLine();
-					zahl3 = Integer.parseInt(eingabe);
-
-					System.out.println("Vierte Zahl?");
-					eingabe = reader.readLine();
-					zahl4 = Integer.parseInt(eingabe);
-
-					System.out.println("Das Ergebnis ist: " + (zahl1 * zahl2 * zahl3 * zahl4));
-				}
-				break;
+				System.out.println("Das Ergebnis ist: " + ergebnis);
+				break;	
 
 			case 4:
 				System.out.println("Erste Zahl?");
