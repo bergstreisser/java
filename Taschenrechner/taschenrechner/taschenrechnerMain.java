@@ -200,7 +200,7 @@ public class taschenrechnerMain {
 					System.out.println("Es darf nicht duch 0 dividiert werden!");
 					break;
 				}
-				System.out.println("Das Ergebnis ist: " + (zahl1 / zahl2));
+				System.out.println("Das Ergebnis ist: " + zahl1 / zahl2);
 				break;
 
 			case 5:
