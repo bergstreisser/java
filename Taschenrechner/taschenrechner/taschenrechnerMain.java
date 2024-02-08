@@ -20,6 +20,7 @@ public class taschenrechnerMain {
 			System.out.println("<4> Geteilt <5> Wurzel");
 			System.out.println("<6> Modulo <7> Potenz");
 			System.out.println("<8> Natürlicher Logarithmus (ln) <9> Logarithmus Basis 10 (log10)");
+			System.out.println("<10> Fakultaet");
 
 
 			eingabe = reader.readLine();
@@ -147,6 +148,19 @@ public class taschenrechnerMain {
 				} else {
 					System.out.println("Das Ergebnis von log10(" + zahl1 + ") ist: " + Math.log10(zahl1));
 				}
+				break;
+
+			case 10:
+				System.out.println("Gib n ein:");
+				zahl1 = Integer.parseInt(reader.readLine());
+				if (zahl1 < 0) {
+					System.out.println("Die eingegebene Zahl darf nicht kleiner als 0 sein.");
+				}
+				int result = 1;
+				for (int i = 1; i <= zahl1; i++) {
+					result *= i;
+				}
+				System.out.println("Die Fakultaet von " + zahl1 + " ist " + result);
 				break;
 
 			default: System.out.println("Gib eine Zahl zwischen 0 und 9 ein!");
