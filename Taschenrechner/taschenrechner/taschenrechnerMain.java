@@ -7,13 +7,12 @@ import java.io.InputStreamReader;
 public class taschenrechnerMain {
 
 	public static void main(String[] args) throws IOException {
-		boolean state = true;
 		double zahl1 = 0, zahl2 = 0, zahl3 = 0, zahl4 = 0;
 		int anzahlElemente = 0;
 		String eingabe = "0";
 		int eingabeFromString = 0;
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		while(state) {
+		while(true) {
 			System.out.println("Rechenoperation?");
 			System.out.println("<0> Ende <1> Plus");
 			System.out.println("<2> Minus <3> Mal");
@@ -28,8 +27,7 @@ public class taschenrechnerMain {
 			switch(eingabeFromString) {
 			case 0:
 				System.out.println("Prozedur wird beendet");
-				state = false;
-				break;
+				return;
 
 			case 1:
 				System.out.println("Sollen 2, 3 oder 4 zahlen addiert werden?");
